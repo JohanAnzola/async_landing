@@ -7,7 +7,7 @@
     "deploy": "gh-pages -d src"
   },
   "repository": {
-    "type": "git",s
+    "type": "git",
     "url": "git+https://github.com/JohanAnzola/async_landing.git"
   },
   "keywords": [],
