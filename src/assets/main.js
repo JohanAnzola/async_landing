@@ -1,4 +1,4 @@
-const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCmS75G-98QihSusY7NfCZtw&part=snippet%2Cid&order=date&maxResults=10';
+const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UC8hRNWq1YDN34LpJGgu19FA&part=snippet%2Cid&order=date&maxResults=10';
 
 const content = null || document.getElementById('content');
 
@@ -28,13 +28,19 @@ async function fetchData(urlApi) {
           <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="w-full">
         </div>
         <div class="mt-4 flex justify-between">
-          <h3 class="text-sm text-gray-700">
+          <h3 class="text-sm text-gray-300">
             <span aria-hidden="true" class="absolute inset-0"></span>
             ${video.snippet.title}
           </h3>
         </div>
+        <div class="mt-4 flex justify-between">
+          <h4 class="text-sm text-gray-500">
+            <span aria-hidden="true" class="absolute inset-0"></span>
+            ${video.snippet.description}
+          </h4>
+        </div>
       </div>
-    `).slice(0,4).join('')}
+    `).slice(0,10).join('')}
 
     `;
     content.innerHTML = view;
